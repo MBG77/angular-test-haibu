@@ -3,7 +3,7 @@ export interface IUsuario {
     nombre: string;
     apellido: string;
     telefono: number;
-    rut: number;
+    rut: string;
     fechaNacimiento: string;
     direccion: IDireccion;
     activo: number;

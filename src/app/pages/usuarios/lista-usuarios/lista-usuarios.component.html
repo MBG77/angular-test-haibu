@@ -1,18 +1,18 @@
 <div class="mt-5">
     <div class="row mb-4">
         <div class="col-3">
-            <label>Nombre:</label>
+            <label class="mr-1">Nombre:</label>
             <input type="text" #filtroNombre>
         </div>
         <div class="col-3">
-            <label>Apellidos:</label>
+            <label class="mr-1">Apellidos:</label>
             <input type="text" #filtroApellido>
         </div>
         <div class="col-6">
             <button class="btn btn-primary" (click)="filtrarUsuarios(filtroNombre.value, filtroApellido.value)">Buscar</button>
         </div>
     </div>
-    <div class="row">
+    <div class="row mb-5">
         <table class="table table-striped">
             <thead>
                 <tr>

@@ -9,8 +9,12 @@
                 <div class="col-6">
                     <h6 class="card-title">Rut:</h6>
                 </div>
-                <div class="col-6">
+                <div class="col-6" *ngIf="!rutInvalido">
                     <p class="card-text">{{usuario?.rut}}</p>
+                </div>
+                <div class="col-6" *ngIf="rutInvalido">
+                    <p class="card-text mb-0">{{usuario?.rut}}</p>
+                    <p class="card-text text-danger">El rut es invalido.</p>
                 </div>
                 <div class="col-6">
                     <h6 class="card-title">Teléfono:</h6>
@@ -21,8 +25,12 @@
                 <div class="col-6">
                     <h6 class="card-title">Fecha de Nacimiento:</h6>
                 </div>
-                <div class="col-6">
+                <div class="col-6" *ngIf="!fechaInvalida">
                     <p class="card-text">{{usuario?.fechaNacimiento}}</p>
+                </div>
+                <div class="col-6" *ngIf="fechaInvalida">
+                    <p class="card-text mb-0">{{usuario?.fechaNacimiento}}</p>
+                    <p class="card-text text-danger">La fecha de nacimiento es invalida.</p>
                 </div>
             </div>
         </div>
