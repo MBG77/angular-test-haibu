@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
 
+## RUN 
+
+- Clonar Proyecto: `git clone https://github.com/MBG77/angular-test-haibu.git`
+- Ingresar mediante la terminal a la carpeta del proyecto descargado.
+- Ejecutar los siguientes comandos en la terminal: 
+- - `npm install`
+- - `ng serve -o`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
