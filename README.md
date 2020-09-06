@@ -1,6 +1,15 @@
 # AngularTestHaibu
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2 
+and use Boostrap v4.5.2
+
+## Run 
+
+- Clonar Proyecto: `git clone https://github.com/MBG77/angular-test-haibu.git`
+- Ingresar mediante la terminal a la carpeta del proyecto descargado.
+- Ejecutar los siguientes comandos en la terminal: 
+    - `npm install`
+    - `ng serve -o`
 
 ## Development server
 
@@ -25,3 +34,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
