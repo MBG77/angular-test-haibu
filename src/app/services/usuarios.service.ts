@@ -34,13 +34,19 @@ export class UsuariosService {
     );
   }
 
-  getUsersByFilter(activo?: string) {
+  getUsersByFilter(nombre?: string, apellido?: string) {
     let url = HAIBU_URL_SERVICES.PRUEBA_TECNICA_SF.USER;
 
-    if (activo && url.indexOf('?') > 0) {
-      url += `&activo=${activo}`;
-    } else if (activo && url.indexOf('?') < 0) {
-      url += `?activo=${activo}`;
+    if (nombre && url.indexOf('?') > 0) {
+      url += `&nombre=${nombre}`;
+    } else if (nombre && url.indexOf('?') < 0) {
+      url += `?nombre=${nombre}`;
+    }
+
+    if (apellido && url.indexOf('?') > 0) {
+      url += `&apellido=${apellido}`;
+    } else if (apellido && url.indexOf('?') < 0) {
+      url += `?apellido=${apellido}`;
     }
     console.log('getUsersByFilter url:: ', url);
 

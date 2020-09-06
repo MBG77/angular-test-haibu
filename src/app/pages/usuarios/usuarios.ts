@@ -14,3 +14,8 @@ interface IDireccion {
     numero: number;
     comuna: string;
 }
+
+export interface IActivo {
+    idActivo: number;
+    desActivo: string;
+}

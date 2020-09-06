@@ -1,37 +1,52 @@
 <div class="mt-5">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre Usuario</th>
-                <th scope="col">Rut</th>
-                <th scope="col">Teléfono</th>
-                <th scope="col">Fecha de Nacimiento</th>
-                <th scope="col">Dirección</th>
-                <th scope="col">Activo</th>
-                <th scope="col">Acción</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let usuario of listaUsuarios">
-                <th scope="row">{{usuario.id}}</th>
-                <td>{{usuario.nombre}} {{usuario.apellido}}</td>
-                <td>{{usuario.rut}}</td>
-                <td>{{usuario.telefono}}</td>
-                <td>{{usuario.fechaNacimiento}}</td>
-                <td>
-                    {{usuario.direccion ? usuario.direccion.calle + ' ' + usuario.direccion.numero + ', ' + usuario.direccion.comuna : 'Usuario sin Dirección.'}}
-                </td>
-                <td>
-                    <span class="text-success" *ngIf="usuario.activo === 1">Activo</span>
-                    <span class="text-danger" *ngIf="usuario.activo === 0">Inactivo</span>
-                </td>
-                <td>
-                    <button class="btn-sm btn-secondary btn-block" (click)="verDetalleUsuario(usuario.id)">
-                        detalle
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row mb-4">
+        <div class="col-3">
+            <label>Nombre:</label>
+            <input type="text" #filtroNombre>
+        </div>
+        <div class="col-3">
+            <label>Apellidos:</label>
+            <input type="text" #filtroApellido>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary" (click)="filtrarUsuarios(filtroNombre.value, filtroApellido.value)">Buscar</button>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre Usuario</th>
+                    <th scope="col">Rut</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Fecha de Nacimiento</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Activo</th>
+                    <th scope="col">Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of listaUsuarios">
+                    <th scope="row">{{usuario.id}}</th>
+                    <td>{{usuario.nombre}} {{usuario.apellido}}</td>
+                    <td>{{usuario.rut}}</td>
+                    <td>{{usuario.telefono}}</td>
+                    <td>{{usuario.fechaNacimiento}}</td>
+                    <td>
+                        {{usuario.direccion ? usuario.direccion.calle + ' ' + usuario.direccion.numero + ', ' + usuario.direccion.comuna : 'Usuario sin Dirección.'}}
+                    </td>
+                    <td>
+                        <span class="text-success" *ngIf="usuario.activo === 1">Activo</span>
+                        <span class="text-danger" *ngIf="usuario.activo === 0">Inactivo</span>
+                    </td>
+                    <td>
+                        <button class="btn-sm btn-secondary btn-block" (click)="verDetalleUsuario(usuario.id)">
+                            detalle
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

@@ -7,6 +7,7 @@ import { ListaUsuariosComponent } from './pages/usuarios/lista-usuarios/lista-us
 import { DetalleUsuarioComponent } from './pages/usuarios/detalle-usuario/detalle-usuario.component';
 import { RoutesModule } from './app.routes';
 import { HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     RoutesModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   exports: [
     PageNotFoundComponent,
