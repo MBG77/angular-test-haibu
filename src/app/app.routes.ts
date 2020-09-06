@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import { ListaUsuariosComponent } from './pages/lista-usuarios/lista-usuarios.component';
-import { DetalleUsuarioComponent } from './pages/detalle-usuario/detalle-usuario.component';
+import { ListaUsuariosComponent } from './pages/usuarios/lista-usuarios/lista-usuarios.component';
+import { DetalleUsuarioComponent } from './pages/usuarios/detalle-usuario/detalle-usuario.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 

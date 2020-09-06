@@ -3,8 +3,8 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { ListaUsuariosComponent } from './pages/lista-usuarios/lista-usuarios.component';
-import { DetalleUsuarioComponent } from './pages/detalle-usuario/detalle-usuario.component';
+import { ListaUsuariosComponent } from './pages/usuarios/lista-usuarios/lista-usuarios.component';
+import { DetalleUsuarioComponent } from './pages/usuarios/detalle-usuario/detalle-usuario.component';
 import { RoutesModule } from './app.routes';
 import { HttpClientModule} from '@angular/common/http';
 

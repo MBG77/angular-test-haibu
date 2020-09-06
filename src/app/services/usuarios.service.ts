@@ -11,14 +11,9 @@ export class UsuariosService {
 
   constructor(public http: HttpClient) { }
 
-  getUsers(id?: number) {
-    let url =  HAIBU_URL_SERVICES.PRUEBA_TECNICA_SF.USER;
-
-    if (id) {
-      url += `/${id}`;
-    }
-
-    console.log('getUsers url:: ', url);
+  getUserById(id: number) {
+    const url =  `${HAIBU_URL_SERVICES.PRUEBA_TECNICA_SF.USER}/${id}`;
+    console.log('getUserById url:: ', url);
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -29,7 +24,36 @@ export class UsuariosService {
     return this.http.get(url, httpOptions).pipe (
       map(
         (resp: any) => {
-          console.log('getUsers RESPONSE: ', resp);
+          console.log('getUserById RESPONSE: ', resp);
+          return resp;
+      }),
+      catchError(err => {
+        console.log('Capturando error localmente..', err);
+        return throwError(err);
+      })
+    );
+  }
+
+  getUsersByFilter(activo?: string) {
+    let url = HAIBU_URL_SERVICES.PRUEBA_TECNICA_SF.USER;
+
+    if (activo && url.indexOf('?') > 0) {
+      url += `&activo=${activo}`;
+    } else if (activo && url.indexOf('?') < 0) {
+      url += `?activo=${activo}`;
+    }
+    console.log('getUsersByFilter url:: ', url);
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    return this.http.get(url, httpOptions).pipe (
+      map(
+        (resp: any) => {
+          console.log('getUsersByFilter RESPONSE: ', resp);
           return resp;
       }),
       catchError(err => {

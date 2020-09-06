@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuariosService } from '../../services/usuarios.service';
+import { UsuariosService } from '../../../services/usuarios.service';
+import { IUsuario } from '../usuarios';
 
 @Component({
   selector: 'app-lista-usuarios',
@@ -8,7 +9,11 @@ import { UsuariosService } from '../../services/usuarios.service';
 })
 export class ListaUsuariosComponent implements OnInit {
 
-  constructor(private usuariosService: UsuariosService) { }
+  public listaUsuarios: IUsuario[];
+
+  constructor(private usuariosService: UsuariosService) {
+    this.listaUsuarios = [];
+  }
 
   ngOnInit() {
     // iniciar loading de carga.
@@ -16,10 +21,11 @@ export class ListaUsuariosComponent implements OnInit {
   }
 
   cargarUsuarios() {
-    this.usuariosService.getUsers().subscribe((resp: any) => {
-      console.log('getUsers:: ', resp);
+    this.usuariosService.getUsersByFilter().subscribe((resp: any) => {
+      this.listaUsuarios = resp;
       // finalizar loading de carga.
-    });
+    },
+    (err) => console.log(err));
   }
 
 }
