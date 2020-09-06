@@ -11,6 +11,14 @@ and use Boostrap v4.5.2
     - `npm install`
     - `ng serve -o`
 
+## RUN 
+
+- Clonar Proyecto: `git clone https://github.com/MBG77/angular-test-haibu.git`
+- Ingresar mediante la terminal a la carpeta del proyecto descargado.
+- Ejecutar los siguientes comandos en la terminal: 
+- - `npm install`
+- - `ng serve -o`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
