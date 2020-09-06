@@ -1,3 +1,30 @@
-<p>
-  detalle-usuario works!
-</p>
+<div class="mt-5 d-flex justify-content-center">
+    <div class="card mb-3" [ngClass]="{'border-primary':usuario?.activo === 1, 'border-danger': usuario?.activo === 0}" style="max-width: 18rem;">
+        <div class="card-header">
+            <h5 class="card-title">#{{usuario?.id}}, {{usuario?.nombre}} {{usuario?.apellido}}</h5>
+            <p class="card-text">{{usuario?.direccion.calle}} {{usuario?.direccion.numero}}, {{usuario?.direccion.comuna}}</p>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <h6 class="card-title">Rut:</h6>
+                </div>
+                <div class="col-6">
+                    <p class="card-text">{{usuario?.rut}}</p>
+                </div>
+                <div class="col-6">
+                    <h6 class="card-title">Teléfono:</h6>
+                </div>
+                <div class="col-6">
+                    <p class="card-text">{{usuario?.telefono}}</p>
+                </div>
+                <div class="col-6">
+                    <h6 class="card-title">Fecha de Nacimiento:</h6>
+                </div>
+                <div class="col-6">
+                    <p class="card-text">{{usuario?.fechaNacimiento}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

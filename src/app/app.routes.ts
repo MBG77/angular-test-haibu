@@ -9,7 +9,7 @@ const app_routes: Routes = [
     {
         path: '', children: [
             {path: 'lista-usuarios', component: ListaUsuariosComponent},
-            {path: 'detalle-usuario', component: DetalleUsuarioComponent},
+            {path: 'detalle-usuario/:id', component: DetalleUsuarioComponent},
             {path: '', redirectTo: 'lista-usuarios', pathMatch: 'full'}
         ]
     },

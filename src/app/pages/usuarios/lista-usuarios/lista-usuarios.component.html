@@ -27,8 +27,8 @@
                     <span class="text-danger" *ngIf="usuario.activo === 0">Inactivo</span>
                 </td>
                 <td>
-                    <button class="btn-sm btn-secondary">
-                        Ver Detalle
+                    <button class="btn-sm btn-secondary btn-block" (click)="verDetalleUsuario(usuario.id)">
+                        detalle
                     </button>
                 </td>
             </tr>
