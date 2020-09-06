@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { ListaUsuariosComponent } from './pages/lista-usuarios/lista-usuarios.component';
 import { DetalleUsuarioComponent } from './pages/detalle-usuario/detalle-usuario.component';
 import { RoutesModule } from './app.routes';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RoutesModule } from './app.routes';
   ],
   imports: [
     BrowserModule,
-    RoutesModule
+    RoutesModule,
+    HttpClientModule
   ],
   exports: [
     PageNotFoundComponent,
